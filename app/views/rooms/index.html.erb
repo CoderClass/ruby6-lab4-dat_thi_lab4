@@ -1,0 +1,8 @@
+<% @rooms.each do |room| %>
+    <%= link_to room.name, room_path(room) %>
+    <br>
+<% end %>
+<%= form_for Room.new do |f| %>
+    <%= f.text_field :name, placeholder: 'Room name' %>
+    <%= f.submit %>
+<% end %>
